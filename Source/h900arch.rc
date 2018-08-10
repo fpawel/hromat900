@@ -1,0 +1,3 @@
+HROMAT_GAS_FILE RT_RCDATA "default_gas.ini"
+EXCEL_REPORT_TEMPLATE_FILE RT_RCDATA "template1.xls"
+

@@ -1,0 +1,9 @@
+HRMTMD_INI_FILE RT_RCDATA "hrmtmd.ini"
+HROMAT_VARS_FILE RT_RCDATA "vars.ini"
+HROMAT_GROUPS_FILE RT_RCDATA "varsgroups.ini"
+HROMAT_GAS_FILE RT_RCDATA "gas.ini"
+CSS_REPORT_FILE RT_RCDATA "template.css"
+WARN_SOUND_FILE RT_RCDATA "Windows Hardware Fail.wav"
+
+
+

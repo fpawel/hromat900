@@ -1,0 +1,2 @@
+Build
+  [Linker Fatal error] Unable to open file 'INDY.LIB'

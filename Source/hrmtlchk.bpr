@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\hrmtlchk.dll"/>
+    <OBJFILES value="..\obj\srcHrmtlchk.obj ..\obj\MyWindow.obj ..\obj\hrmtstat.obj 
+      ..\obj\kostik_fround.obj"/>
+    <RESFILES value="hrmtlchk.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="teeui.lib teeqr.lib teedb.lib dbrtl.lib bdertl.lib qrpt.lib indy.lib 
+      vclx.lib bcbsmp.lib tee.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib tee.lib bcbsmp.lib vclx.lib indy.lib qrpt.lib bdertl.lib 
+      dbrtl.lib teedb.lib teeqr.lib teeui.lib"/>
+    <PACKAGES value="vclx.bpi qrpt.bpi"/>
+    <PATHCPP value=".;VCLUtils;DevSys;Kostik"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
+    <MAINSOURCE value="hrmtlchk.bpf"/>
+    <INCLUDEPATH value="Kostik;C:\CBuilder6\Projects;Application;my_include;obj;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="Kostik;C:\CBuilder6\Projects;Application;obj;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-src_suffix cpp -IKostik -IC:\CBuilder6\Projects -IApplication 
+      -Imy_include -Iobj -IDevSys -IDialogs -IComPort -IVCLUtils -IExcpt 
+      -I$(BCB)\include -I$(BCB)\include\vcl -boa"/>
+    <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
+      -tWD -tWM- -c"/>
+    <PFLAGS value="-N2..\obj -N0..\obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-llib -I..\obj -D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="hrmtlchk.res" FORMNAME="" UNITNAME="hrmtlchk.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="hrmtlchk.bpf" FORMNAME="" UNITNAME="hrmtlchk" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="srcHrmtlchk.cpp" FORMNAME="" UNITNAME="srcHrmtlchk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="VCLUtils\MyWindow.cpp" FORMNAME="" UNITNAME="MyWindow" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DevSys\hrmtstat.cpp" FORMNAME="" UNITNAME="hrmtstat" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Kostik\kostik_fround.cpp" FORMNAME="" UNITNAME="kostik_fround" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+c:\cbuilder6\Bin\dclqrt60.bpl=QuickReport Components
+c:\cbuilder6\Bin\idefilters60.bpl=IDE Filter for CPP32
+c:\cbuilder6\Bin\dcltee60.bpl=TeeChart Components
+C:\CBuilder6\Bin\dclbde60.bpl=Borland BDE DB Components
+C:\CBuilder6\Bin\dcldb60.bpl=Borland Database Components
+C:\CBuilder6\Bin\dclstd60.bpl=Borland Standard Components
+C:\CBuilder6\Bin\dbx60.bpl=Borland SQL Explorer UI Package
+c:\cbuilder6\Bin\dcltqr60.bpl=TeeChart for QuickReport Components
+C:\CBuilder6\Bin\dclmid60.bpl=Borland MyBase DataAccess Components
+c:\cbuilder6\Bin\dcl31w60.bpl=Delphi 1.0 Compatibility Components
+c:\cbuilder6\Bin\dclbcbsmp60.bpl=Borland Sample Controls Design Time Package
+c:\cbuilder6\Bin\dclact60.bpl=Borland ActionBar Components
+c:\cbuilder6\Bin\DCLIB60.bpl=InterBase Data Access Components
+c:\cbuilder6\Bin\DBWEBXPRT.BPL=Borland Web Wizard Package
+c:\cbuilder6\Bin\DCLNMF60.bpl=NetMasters Fastnet Tools
+c:\cbuilder6\Bin\dclocx60.bpl=Borland Sample Imported ActiveX Controls
+c:\cbuilder6\Bin\dclindy60.bpl=Internet Direct (Indy) for D6 Property and Component Editors
+c:\cbuilder6\Bin\dcldss60.bpl=Borland Decision Cube Components
+c:\cbuilder6\Bin\dclclxdb60.bpl=Borland CLX Database Components
+C:\CBuilder6\Bin\dclclxstd60.bpl=Borland CLX Standard Components
+c:\cbuilder6\Bin\dclmcn60.bpl=Borland DataSnap Connection Components
+c:\cbuilder6\Bin\dclsmpedit60.bpl=Borland Editor Script Enhancements
+c:\cbuilder6\Bin\applet60.bpl=Borland Control Panel Applet Package
+c:\cbuilder6\Bin\dclemacsedit60.bpl=Borland Editor Emacs Enhancements
+c:\cbuilder6\Bin\dclmlwiz60.bpl=Borland Markup Language Wizards
+c:\cbuilder6\Bin\dclnet60.bpl=Borland Internet Components
+c:\cbuilder6\Bin\dclwbm60.bpl=Borland InternetExpress Components
+c:\cbuilder6\Bin\bcbie60.bpl=Borland C++Builder Internet Explorer 5 Components Package
+c:\cbuilder6\Bin\dclwebsnap60.bpl=Borland WebSnap Components
+c:\cbuilder6\Bin\dclsoap60.bpl=Borland SOAP Components
+c:\cbuilder6\Bin\dcldbx60.bpl=Borland dbExpress Components
+c:\cbuilder6\Bin\bcb2kaxserver60.bpl=Borland C++Builder COM Server Components Sample Package
+c:\cbuilder6\Bin\dclado60.bpl=Borland ADO DB Components
+c:\cbuilder6\Bin\dclcds60.bpl=Borland Base Cached ClientDataset Component
+c:\cbuilder6\Bin\dclbdecds60.bpl=Borland Local BDE ClientDataset Components
+c:\cbuilder6\Bin\dcldbxcds60.bpl=Borland Local DBX ClientDataset Components
+c:\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=11
+Item0=C:\CBuilder6\Projects;Application;my_include;obj;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl
+Item1=C:\HromoMaster\Source;Report;C:\CBuilder6\Projects;Application;C:\Program Files\Borland\CBuilder6\Projects;E:\CBuilder6\Projects;my_include;obj;console;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl
+Item2=Report;C:\CBuilder6\Projects;Application;C:\Program Files\Borland\CBuilder6\Projects;E:\CBuilder6\Projects;my_include;obj;console;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl
+Item3=C:\CBuilder6\Projects;Application;C:\Program Files\Borland\CBuilder6\Projects;E:\CBuilder6\Projects;my_include;obj;console;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl
+Item4=Application;C:\Program Files\Borland\CBuilder6\Projects;E:\CBuilder6\Projects;my_include;obj;console;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl
+Item5=C:\Program Files\Borland\CBuilder6\Projects;E:\CBuilder6\Projects;my_include;obj;console;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl
+Item6=my_include;obj;console;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\include;$(BCB)\include\vcl
+Item7=Intrfc;..\my_include;obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;C:\HromoMaster\TestTCP;C:\OM_Incoming_DB;VCLUtils;WinUtils;Stnd;Excpt;C:\Program Files\Borland\CBuilder6\Projects;C:\AutomationStend73\NI USB-6008;$(BCB)\include;$(BCB)\include\vcl
+Item8=..\my_include;obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;C:\HromoMaster\TestTCP;C:\OM_Incoming_DB;VCLUtils;WinUtils;Stnd;Excpt;C:\Program Files\Borland\CBuilder6\Projects;C:\AutomationStend73\NI USB-6008;$(BCB)\include;$(BCB)\include\vcl
+Item9=obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;C:\HromoMaster\TestTCP;C:\OM_Incoming_DB;VCLUtils;WinUtils;Stnd;Excpt;C:\Program Files\Borland\CBuilder6\Projects;C:\AutomationStend73\NI USB-6008;$(BCB)\include;$(BCB)\include\vcl
+Item10=console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;C:\HromoMaster\TestTCP;C:\OM_Incoming_DB;VCLUtils;WinUtils;Stnd;Excpt;C:\Program Files\Borland\CBuilder6\Projects;C:\AutomationStend73\NI USB-6008;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=11
+Item0=C:\CBuilder6\Projects;Application;obj;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=C:\HromoMaster\Source;Report;C:\CBuilder6\Projects;Application;obj;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item2=Report;C:\CBuilder6\Projects;Application;obj;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item3=Application;obj;DevSys;Dialogs;ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item4=C:\CBuilder6\Projects;Application;E:\CBuilder6\Projects;Intrfc;C:\Program Files\Borland\CBuilder6\Projects;..\my_include;obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item5=Application;E:\CBuilder6\Projects;Intrfc;C:\Program Files\Borland\CBuilder6\Projects;..\my_include;obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item6=E:\CBuilder6\Projects;Intrfc;C:\Program Files\Borland\CBuilder6\Projects;..\my_include;obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item7=Intrfc;C:\Program Files\Borland\CBuilder6\Projects;..\my_include;obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item8=..\my_include;obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;VCLUtils;Excpt;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item9=obj;console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;C:\HromoMaster\TestTCP;C:\OM_Incoming_DB;VCLUtils;WinUtils;Stnd;Excpt;C:\Program Files\Borland\CBuilder6\Projects;C:\AutomationStend73\NI USB-6008;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item10=console;DevSys;Dialogs;ComPort;..\Dialogs;..\VCLUtils;..\Excpt;..\ComPort;C:\HromoMaster\TestTCP;C:\OM_Incoming_DB;VCLUtils;WinUtils;Stnd;Excpt;C:\Program Files\Borland\CBuilder6\Projects;C:\AutomationStend73\NI USB-6008;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=4
+Item0=C:\Program Files\Borland\Delphi5\Source\Vcl\
+Item1=$(BCB)\source\vcl;C:\Program Files\Borland\Delphi5\Source\Vcl\;C:\CBuilder6\Source\Indy\
+Item2=$(BCB)\source\vcl;C:\Program Files\Borland\Delphi5\Source\Vcl\
+Item3=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=..\obj
+Item1=obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=..\bin\
+Item1=..\bin
+
+[HistoryLists\hIBPIOutputDir]
+Count=2
+Item0=lib
+Item1=..\bin
+
+[Debugging]
+DebugSourceDirs=C:\Program Files\Borland\Delphi5\Source\Vcl\
+
+[Parameters]
+RunParams=-debug  -nologin -profile:Хромат1 -con:gui -nosysconfig -nograduation
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=C:\Hromat_3\bin\hromat900.exe
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>
