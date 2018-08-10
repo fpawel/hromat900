@@ -350,13 +350,13 @@ void MakeTbl1(Elem body, TableT& tbl, int rowCount) {
         AddText( tbl[1+ii][1], Gas::Formula(i).c_str() );
     }
 
-    AddText( tbl[1 + gasCnt][0], "Физико-химические показатели", TextAttr().Align("center") );
-    tbl[1][0]->SetAttribute("colspan", "6" );
+    AddText( tbl[cc - 6][0], "Физико-химические показатели", TextAttr().Align("center") );
+    tbl[cc - 6][0]->SetAttribute("colspan", "6" );
 
-    AddText( tbl[ 1 + gasCnt + 0][1], "Hcv,МДж/м3" );
+    AddText( tbl[ 1 + gasCnt + 0][1], "Hsv,МДж/м3" );
     AddText( tbl[ 1 + gasCnt + 1][1], "Hiv,МДж/м3" );
     AddText( tbl[ 1 + gasCnt + 2][1], "p,кг/м3" );
-    AddText( tbl[ 1 + gasCnt + 3][1], "d,МДж/м3" );
+    AddText( tbl[ 1 + gasCnt + 3][1], "d" );
     AddText( tbl[ 1 + gasCnt + 4][1], "Ws,МДж/м3" );
     AddText( tbl[ 1 + gasCnt + 5][1], "Wi,МДж/м3" );
 }
