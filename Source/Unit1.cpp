@@ -172,6 +172,8 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	LOG_FOO_LIFETIME_QUOTES;
     //DecimalSeparator = '.';
 
+    //testjournals();
+
     IniGas()->WriteString("COMMON","units", MeasureUnits) ;
 
     MediaPlayer1->Open();

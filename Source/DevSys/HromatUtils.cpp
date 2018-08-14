@@ -147,9 +147,10 @@ bool TryEncodeDateTime( const HromatDateTimeInternal& hdt, TDateTime& ret)
 //------------------------------------------------------------------------------
 TDateTime EncodeDateTime( const HromatDateTimeInternal& hdt)
 {
+
     TDateTime ret = 0;
-    if( !TryEncodeDateTime(hdt.year_, hdt.month_, hdt.day_, hdt.hour_,
-    	hdt.minute_, hdt.second_, 0, ret) )
+    if( !TryEncodeDateTime(hdt.year_, hdt.month_, hdt.day_, hdt.hour_ % 24,
+    	hdt.minute_ % 60 , hdt.second_ % 60, 0, ret) )
         ret = 0;
     return ret;
 }

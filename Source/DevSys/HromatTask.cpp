@@ -755,3 +755,32 @@ void ReadMeasurmentsJournalsTask::Perform()				 VIRTUAL_FINAL_
     );
 }
 
+/*
+void testjournals() {
+    #include <fstream>
+    using namespace std;
+    ifstream inFile;
+
+    // Файл "Анализ"
+    Jurnal_Analize jurnalAnalize;
+
+    // Файл "Архив анализов"(12k)
+    Jurnal_AnalizeArchive jurnalAnalizeArchive;
+
+    inFile.open("C:\\4\\janalize.h90", std::ios::binary);
+    if (!inFile) {
+        cerr << "Unable to open file datafile.txt";
+        exit(1);   // call system to stop
+    }
+    inFile.read((char *)&jurnalAnalize,sizeof(Jurnal_Analize)) ;
+
+    TDateTime v = EncodeDateTime( jurnalAnalize.startDateTime );
+
+    AnsiString s = DateTimeToStr(v);
+
+    s = "";
+
+    jurnalAnalize.startDateTime.day_ = 0;
+
+}
+*/

@@ -18,6 +18,8 @@ class TransferManager;
 class TFrmWait;
 typedef boost::shared_ptr<TFrmWait> PFrmWait;
 
+//void testjournals();
+
 
 //------------------------------------------------------------------------------
 class HandleReadModbusRegistersData : public HandleHromatTask
