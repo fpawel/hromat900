@@ -54,6 +54,7 @@ ConstCharPtrConst
     	TCP_PORT_NUM_ID = "Port",
         USE_PROXI_ID = "использовать_прокси_сервер",
         PROXI_SERVER_ID = "прокси_сервер",
+        TCP_LOCAL_ADDR_ID = "TCP_LOCAL_ADDR",
 
     // журнал событий
     EVENTS_JOURNAL_NODE = "EVENTS_JOURNAL",

@@ -34,6 +34,8 @@ namespace AppSetsGrdItems
     "IP-адрес",
     "IP-порт",
 
+    "IP-адрес локалтный",
+
     "Использовать прокси-сервер",
     "Прокси-сервер :[порт]:",
 
@@ -66,6 +68,8 @@ namespace AppSetsGrdItems
     	ConnectChanal,
     	IP,
     	TCPPort,
+
+        IP_local,
 
         UseProxi,
         Proxi,

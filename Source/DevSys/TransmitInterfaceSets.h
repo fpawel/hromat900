@@ -20,6 +20,7 @@ struct TransmitInterfaceSets
     unsigned comPortBaudRate_;
     // tcp
     AnsiString tcpHost_;
+    AnsiString tcpLocalAddr_;
     unsigned tcpPort_;
     bool useProxi_;
     AnsiString proxi_;

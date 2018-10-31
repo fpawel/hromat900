@@ -58,11 +58,14 @@ public:
     void SetHost(const AnsiString&);
     AnsiString GetHost() const;
 
+    void SetLocalAdr(const AnsiString&);
+    AnsiString GetLocalAddr() const;
+
     void BreakConnection();
 
 private:
     int port_;
-    AnsiString host_;
+    AnsiString host_, localAddr_;
     sockaddr_in servAddr_, cliAddr_;
     bool connected_;
 

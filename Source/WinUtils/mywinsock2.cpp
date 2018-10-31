@@ -103,6 +103,15 @@ AnsiString VCLClientSocketHlpr::GetHost() const
 }
 //------------------------------------------------------------------------------
 
+void VCLClientSocketHlpr::SetLocalAdr(const AnsiString& v)
+{
+    localAddr_ = v;
+}
+AnsiString VCLClientSocketHlpr::GetLocalAddr() const
+{
+    return localAddr_;
+}
+
 void VCLClientSocketHlpr::MakeInetAddrs()
 {
     servAddr_.sin_family = AF_INET;
@@ -112,7 +121,11 @@ void VCLClientSocketHlpr::MakeInetAddrs()
     cliAddr_.sin_family = AF_INET;
     cliAddr_.sin_port = 0;
 
-    const AnsiString currentIP = GetCurrentUserIp();
+    AnsiString currentIP = Trim(localAddr_);
+    if (currentIP == "") {
+        currentIP = GetCurrentUserIp();
+    }
+
     //const AnsiString currentIP = host_;
 
     cliAddr_.sin_addr.s_addr = ::inet_addr( currentIP.c_str() );
@@ -262,4 +275,6 @@ int VCLClientSocketHlpr::Read(  void* pBuff, int count )
 
 }
 //------------------------------------------------------------------------------
+
+
 

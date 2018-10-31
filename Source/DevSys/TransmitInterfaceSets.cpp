@@ -39,9 +39,9 @@ TransmitInterfaceSets LoadTransmitInterfaceSets()
     sets_.tcpHost_ =  READ_XML_STR_( IP_HOST_ID,       "192.168.1.5");
     sets_.tcpPort_  = READ_XML_INT_( TCP_PORT_NUM_ID, 0, 100000, 502);
     sets_.useProxi_ = READ_XML_INT_( USE_PROXI_ID, 0, 1, 0);
-    sets_.proxi_ = READ_XML_STR_( PROXI_SERVER_ID,       "192.168.0.1:3128"); 
+    sets_.proxi_ = READ_XML_STR_( PROXI_SERVER_ID,       "192.168.0.1:3128");
     sets_.useFtp  = READ_XML_INT_( "использовать_FTP",0,1,0);
-
+    sets_.tcpLocalAddr_ = TiXML::GetStrAtr(xml_, TCP_LOCAL_ADDR_ID, "");
 
     return sets_;
 }
@@ -67,11 +67,14 @@ void SaveTransmitInterfaceSets(const TransmitInterfaceSets& sets_)
     WRITE_XML_STR_( PROXI_SERVER_ID, sets_.proxi_ );
     WRITE_XML_INT_( USE_PROXI_ID, sets_.useProxi_ );
     WRITE_XML_INT_( "использовать_FTP", sets_.useFtp );
+    TiXML::SetAtr( xml_, TCP_LOCAL_ADDR_ID, sets_.tcpLocalAddr_ );
 
     // конфигурация порта
     xml_ = TiXML::GiveNotNulElement( ProfileXmlElem(), COMPORT_SEKT );
     WRITE_XML_STR_( COMPORT_IDX_ID, sets_.comPort_ );
     WRITE_XML_INT_( COMPORT_BOUDRATE_ID, sets_.comPortBaudRate_ );
+
+
 
 
 
@@ -96,7 +99,9 @@ void SetCtrlPrgrmmDlgItfcSets( TFormAppSetsDlg *dlg, const TransmitInterfaceSets
     CCELL_(UseProxi) = sets_.useProxi_ ? "Да" : "Нет";
     CCELL_(Proxi) = sets_.proxi_;
 
-    CCELL_(UseFTP) = sets_.useFtp ? "Да" : "Нет";;
+    CCELL_(UseFTP) = sets_.useFtp ? "Да" : "Нет";
+
+    CCELL_(IP_local) = sets_.tcpLocalAddr_;
 
     #undef CCELL_(ss)
 }
@@ -123,6 +128,8 @@ TransmitInterfaceSets GetCtrlPrgrmmDlgItfcSets( TFormAppSetsDlg *dlg )
 
     sets_.useFtp = CCELL_(UseFTP) =="Да";
 
+    sets_.tcpLocalAddr_ = CCELL_(IP_local);
+
     return sets_;
 
 }
@@ -132,6 +139,6 @@ bool IsNotIdenticChanals( const TransmitInterfaceSets& lhs, const TransmitInterf
 	#define NOT_EQ_(nn) lhs.##nn##_!=rhs.##nn##_
 	return NOT_EQ_(isTCP) ||
     !rhs.isTCP_ && ( NOT_EQ_(comPort) || NOT_EQ_(comPortBaudRate) ) ||
-    rhs.isTCP_ && (  NOT_EQ_(tcpHost) || NOT_EQ_(tcpPort) );
+    rhs.isTCP_ && (  NOT_EQ_(tcpHost) || NOT_EQ_(tcpPort)  || NOT_EQ_(tcpLocalAddr) );
     #undef NOT_EQ_(nn)
 }

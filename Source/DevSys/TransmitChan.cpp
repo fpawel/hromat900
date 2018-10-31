@@ -328,7 +328,8 @@ void TransmitInterface::ApplySettings()
     comm_->SetSettings( commSets );
     // конфигурация TCP
     tcp_->SetHost( sets_.tcpHost_ );
-    tcp_->SetPortNum( sets_.tcpPort_ );    
+    tcp_->SetPortNum( sets_.tcpPort_ );
+    tcp_->SetLocalAdr( sets_.tcpLocalAddr_ );
     LogMyAppEvt( "Выбрана конфигурация канала связи", chanal_->Description() ); 
 }
 
